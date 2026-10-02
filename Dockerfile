@@ -1,7 +1,7 @@
 FROM python:3.10-slim
 
-# Install curl and Ollama
-RUN apt-get update && apt-get install -y curl
+# Install curl, zstd, and Ollama
+RUN apt-get update && apt-get install -y curl zstd
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 WORKDIR /app
