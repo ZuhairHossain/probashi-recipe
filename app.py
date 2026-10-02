@@ -22,7 +22,7 @@ if st.button("Ask Dadi"):
     if recipe_input:
         with st.spinner("Dadi is remembering the recipe..."):
             # Call your local open-weight Llama model
-            response = ollama.chat(model='llama3.2', messages=[
+            response = ollama.chat(model='gemma2:2b', messages=[    
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': recipe_input}
             ])
